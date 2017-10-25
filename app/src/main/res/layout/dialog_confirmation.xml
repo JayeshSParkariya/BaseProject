@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="msg"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_dialog_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="120dp"
+            android:padding="16dp"
+            android:text="@{msg}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/btn_color"
+            tools:text="Your password changed successfully" />
+
+        <View
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_dialog_btn_no"
+                android:padding="8dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/btn_color"
+                app:label="@{@string/no}"
+                tools:text="No" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#f0f0f0" />
+
+            <Button
+                android:id="@+id/btnYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_dialog_btn_yes"
+                android:padding="8dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/btn_color"
+                app:label="@{@string/yes}"
+                tools:text="Yes" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

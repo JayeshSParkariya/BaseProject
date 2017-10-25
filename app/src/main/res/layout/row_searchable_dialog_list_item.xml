@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="hightecit.appname.kuwait.interfaces.SearchableItem" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:visibility="@{item.selected ? View.VISIBLE : View.INVISIBLE}"
+            app:srcCompat="@drawable/ic_check_white"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvItem"
+            style="@style/txt_white"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageView"
+            android:paddingBottom="16dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="0dp"
+            android:paddingTop="16dp"
+            android:text="@{item.name}"
+            tools:text="Kuwait"
+            tools:textColor="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvItem"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+</layout>

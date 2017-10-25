@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenLocal()
+    }
+    dependencies {
+        // Add this line
+        classpath 'com.google.gms:google-services:3.1.0'
+    }
+}
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId 'hightecit.appname.kuwait'
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    productFlavors {
+    }
+}
+
+repositories {
+    mavenCentral() // jcenter() works as well because it pulls from Maven Central
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:percent:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    compile 'com.google.firebase:firebase-core:11.0.2'
+    compile 'com.google.firebase:firebase-messaging:11.0.2'
+    compile 'com.google.firebase:firebase-crash:11.0.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.koushikdutta.ion:ion:2.+'
+}
+// Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'

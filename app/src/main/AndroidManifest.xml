@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hightecit.appname.kuwait">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:name="hightecit.appname.kuwait.MyApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--/All Activity/-->
+        <activity
+            android:name="hightecit.appname.kuwait.HomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="hightecit.appname.kuwait.NoInternetActivity"
+            android:screenOrientation="portrait" />
+
+        <!--/End All Activity/-->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <!--/ActiveAndroid/-->
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="BodyGoalsDB" />
+
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="hightecit.hallmanagement.kuwait.model.Label" />
+        <!--End-->
+
+        <!--FCM-->
+        <service android:name="hightecit.appname.kuwait.fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="hightecit.appname.kuwait.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--End FCM-->
+
+    </application>
+
+</manifest>

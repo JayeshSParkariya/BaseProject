@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/ivCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_cancell_white" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/txt_white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/ivCross"
+            android:layout_toStartOf="@+id/ivDone"
+            android:padding="8dp"
+            android:text="@{title}"
+            android:textAlignment="center"
+            tools:text="Title" />
+
+        <ImageView
+            android:id="@+id/ivDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_check_white"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/mDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ivCross"
+            android:background="@color/white" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvSearchable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/mDivider"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_searchable_dialog_list_item" />
+
+    </RelativeLayout>
+</layout>

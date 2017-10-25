@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Base Project</string>
+    <integer name="rotation">0</integer>
+
+    <!--All the fonts-->
+    <string name="regular_font">fonts/poppins_regular.ttf</string>
+
+    <!--All Labels-->
+    <string name="search">Search</string>
+    <string name="ok">OK</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="no_internet_available">Please make sure that you have internet connectivity</string>
+
+
+</resources>

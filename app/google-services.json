@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "492497197139",
+    "firebase_url": "https://studious-camp-138623.firebaseio.com",
+    "project_id": "studious-camp-138623",
+    "storage_bucket": "studious-camp-138623.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492497197139:android:bd2f7d1eaeb33e98",
+        "android_client_info": {
+          "package_name": "hightecit.appname.kuwait"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492497197139-60bhger1t7lo8aa1u3e640pj0qegu35h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hightecit.appname.kuwait",
+            "certificate_hash": "edf6db7955f916569a9089eaf40084a98009339b"
+          }
+        },
+        {
+          "client_id": "492497197139-1166u71mf5qbgogdcf68qpm5as6uu339.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3-rcgbREjssnQy23urbGekHsW5WlQjS0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492497197139-1166u71mf5qbgogdcf68qpm5as6uu339.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

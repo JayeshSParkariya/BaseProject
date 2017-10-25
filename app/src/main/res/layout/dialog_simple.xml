@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="msg"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_dialog_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="120dp"
+            android:padding="16dp"
+            android:text="@{msg}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/btn_color"
+            tools:text="Your password changed successfully" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_dialog_btn"
+            android:text="@string/ok"
+            android:textColor="@color/btn_color"
+            tools:text="Ok" />
+
+    </LinearLayout>
+</layout>
