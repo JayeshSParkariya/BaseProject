@@ -69,7 +69,7 @@ public class PHPService {
 
         public Builder requestParameter(String key, String value) {
             this.requestParam.appendQueryParameter(key, value);
-            this.partArrayList.add(new StringPart(key, value));
+            this.partArrayList.add(new StringPart(key, TextUtils.isEmpty(value) ? "" : value));
             return this;
         }
 
